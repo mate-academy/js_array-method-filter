@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Implement method Splice
+ * Implement method Filter
  */
 function applyCustomFilter() {
   [].__proto__.filter2 = function() {
