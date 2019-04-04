@@ -1,9 +1,9 @@
 'use strict';
 
-const applyCustomSplice = require('./arrayMethodFilter');
+const applyCustomFilter = require('./arrayMethodFilter');
 
 const source = [0, 10, 20, 30];
-applyCustomSplice();
+applyCustomFilter();
 
 test('`filter2` is added to [].__proto__', () => {
   expect([].filter2)
