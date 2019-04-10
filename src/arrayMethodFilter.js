@@ -10,8 +10,9 @@ function applyCustomFilter() {
 
     for (let i = 0; i < items.length; i++) {
       let item = items[i];
+      let shouldBeAdded = callback(item, i, items);
 
-      if (callback(item, i, items)) {
+      if (shouldBeAdded) {
         resultItems.push(item);
       }
     }
