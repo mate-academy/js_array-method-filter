@@ -10,6 +10,11 @@ test('`filter2` is added to [].__proto__', () => {
     .toBeInstanceOf(Function);
 });
 
+test(`filter2 doesn't call default filter`, () => {
+  expect([].filter2.toString().includes('.filter('))
+    .toBe(false);
+});
+
 test('for (item) => item > 10', () => {
   expect(source.filter2(x => x > 10))
     .toEqual([20, 30]);

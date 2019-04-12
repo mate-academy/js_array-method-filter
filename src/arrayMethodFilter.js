@@ -4,7 +4,7 @@
  * Implement method Filter
  */
 function applyCustomFilter() {
-  [].__proto__.filter2 = function() {
+  [].__proto__.filter2 = function(callback) {
     // write code here
   };
 }
