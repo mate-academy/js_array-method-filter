@@ -5,7 +5,12 @@
  */
 function applyCustomFilter() {
   [].__proto__.filter2 = function(callback) {
-    // write code here
+    let result = [];
+    this.map((el, i) => {
+      return callback(el, i, this)
+        ? result.push(el) : result;
+    });
+    return result;
   };
 }
 
