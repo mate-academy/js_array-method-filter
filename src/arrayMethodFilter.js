@@ -6,9 +6,10 @@
 function applyCustomFilter() {
   [].__proto__.filter2 = function(callback) {
     let result = [];
-    this.map((el, i) => {
-      return callback(el, i, this)
-        ? result.push(el) : result;
+    this.forEach((el, i) => {
+      if (callback(el, i, this)) {
+        return result.push(el);
+      }
     });
     return result;
   };
