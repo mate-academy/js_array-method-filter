@@ -9,7 +9,7 @@ function applyCustomFilter() {
     const arr = this;
     arr.forEach((item, index) => {
       if (callback(item, index, arr) === true) {
-        result.push(item);
+        result[result.length] = item;
       }
     });
     return result;
