@@ -3,6 +3,7 @@
 /**
  * Implement method Filter
  */
+
 function applyCustomFilter() {
   [].__proto__.filter2 = function(callback) {
     const filterArray = [];
