@@ -11,6 +11,7 @@ function applyCustomFilter() {
         return filteredArr.push(item);
       }
     });
+    return filteredArr;
   };
 }
 
