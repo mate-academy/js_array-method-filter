@@ -10,8 +10,10 @@ function applyCustomFilter() {
       let resThis = callback(this[i], i, this)
       if (resThis) {
         result.push(this[i]);
-      }
-    } return result;
+      };
+    };
+
+    return result;
   };
 }
 
