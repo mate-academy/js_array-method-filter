@@ -8,7 +8,7 @@ function applyCustomFilter() {
     const filter2Arr = [];
     for (let i = 0; i < this.length; i++) {
       if (callback(this[i], i, this)) {
-        filter2Arr.push(this[i]);
+        filter2Arr[filter2Arr.length] = this[i];
       }
     }
     return filter2Arr;
