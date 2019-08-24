@@ -4,11 +4,12 @@
  * Implement method Filter
  */
 function applyCustomFilter() {
-  const filtered = [];
   [].__proto__.filter2 = function(callback) {
-    // write code here
+    const filtered = [];
     for (let i = 0; i < this.length; i++) {
-      filtered[i] = callback(this[i], i, this);
+      if (callback(this[i], i, this)) {
+        filtered[filtered.length] = this[i];
+      }
     }
 
     return filtered;
