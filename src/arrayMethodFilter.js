@@ -6,7 +6,12 @@
 function applyCustomFilter() {
   [].__proto__.filter2 = function(callback) {
     const filteredArr = [];
-    this.forEach((e, index, arr) => callback(e, index, arr) ? filteredArr.push(e) : e);
+    
+    for (let i = 0; i < this.length; i++) {
+      if (callback(this[i], i, this)) {
+        filteredArr.push(this[i]);
+      }
+    }
 
     return filteredArr;
   };
