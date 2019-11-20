@@ -5,7 +5,14 @@
  */
 function applyCustomFilter() {
   [].__proto__.filter2 = function(callback) {
-    // write code here
+    const arr = [];
+
+    for (let i = 0; i < this.length; i++) {
+      if (callback(this[i], i, this)) {
+        arr[arr.length] = this[i];
+      }
+    }
+    return arr;
   };
 }
 
