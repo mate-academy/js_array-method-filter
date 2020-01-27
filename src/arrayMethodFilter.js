@@ -9,7 +9,7 @@ function applyCustomFilter() {
 
     for (let i = 0; i < this.length; ++i) {
       if (callback(this[i], i, this)) {
-        newArr.push(this[i]);
+        newArr[newArr.length] = this[i];
       }
     }
 
