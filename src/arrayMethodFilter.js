@@ -7,17 +7,17 @@ function applyCustomFilter() {
   [].__proto__.filter2 = function(callback) {
     if (!arguments) {
       return [this];
-    } else {
-      const result = [];
-
-      for (let i = 0; i < this.length; i++) {
-        if (callback(this[i], i, this)) {
-          result.push(this[i]);
-        }
-      }
-
-      return result;
     }
+
+    const result = [];
+
+    for (let i = 0; i < this.length; i++) {
+      if (callback(this[i], i, this)) {
+        result.push(this[i]);
+      }
+    }
+
+    return result;
   };
 }
 
