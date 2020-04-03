@@ -6,6 +6,19 @@
 function applyCustomFilter() {
   [].__proto__.filter2 = function(callback) {
     // write code here
+    const newArr = [];
+
+    if (typeof callback !== 'function') {
+      return this;
+    } else {
+      for (let i = 0; i < this.length; i++) {
+        if (callback(this[i], i, this)) {
+          newArr.push(this[i]);
+        }
+      }
+
+      return newArr;
+    }
   };
 }
 
