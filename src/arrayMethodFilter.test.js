@@ -3,6 +3,7 @@
 const applyCustomFilter = require('./arrayMethodFilter');
 
 const source = [0, 10, 20, 30];
+
 applyCustomFilter();
 
 test('`filter2` is added to [].__proto__', () => {
