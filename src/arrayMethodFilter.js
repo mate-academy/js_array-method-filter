@@ -8,8 +8,8 @@ function applyCustomFilter() {
     const result = [];
 
     for (let i = 0; i < this.length; i++) {
-      if (true && callback(this[i], i, this)) {
-        result.push(this[i]);
+      if (callback(this[i], i, this)) {
+        result[result.length] = this[i];
       }
     }
 
