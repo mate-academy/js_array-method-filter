@@ -17,6 +17,4 @@ function applyCustomFilter() {
   };
 }
 
-// applyCustomFilter();
-// console.log([0, 10, 20, 30].filter2(x => x > 10));
 module.exports = applyCustomFilter;
