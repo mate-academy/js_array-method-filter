@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+function applyCustomFilter() {
+  let array = [1, 2, 3, 5, 20, 14];
+  [].__proto__.filter2 = function(callback) {
+    const arr = [];
+    for (let i = 0; i < this.length; i++) {
+      if (callback(this[i], i, this) === true) {
+        arr.push(this[i]);
+        console.log(arr);
+      }
+    }
+    return arr;
+   };
+  
+  console.log(array.filter2(item => item > 10));
+  
+}
+
+applyCustomFilter()
+
+  </script>
+</body>
+</html>
